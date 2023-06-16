@@ -15,7 +15,6 @@ function PopupWithForm({name, title, buttonText, children, isOpen, onClose, onSu
                         alt="Крестик"/>
                         </button>
                         <form className="popup__form" 
-                        id="avatar-form" 
                         name={name} 
                         noValidate
                         onSubmit={onSubmit}>

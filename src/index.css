@@ -17,6 +17,10 @@
 /*header*/
 
 @import url(./blocks/header/heades.css);
+@import url(./blocks/header/__container/header__container.css);
+@import url(./blocks/header/__links/header__links.css);
+@import url(./blocks/header/__button/header__button.css);
+@import url(./blocks/header/__email/header__email.css);
 
 /*logo*/
 
@@ -82,3 +86,22 @@
 @import url(./blocks/popup/__form-section/popup__form-section.css);
 @import url(./blocks/popup/__button/_inactive/popup__button_inactive.css);
 @import url(./blocks/popup/__form-section/_avatar/popup__form-section_avatar.css);
+
+/* authentication */
+
+@import url(./blocks/authentication/authentication.css);
+@import url(./blocks/authentication/__title/authentication__title.css);
+@import url(./blocks/authentication/__form/authentication__form.css);
+@import url(./blocks/authentication/__input/authentication__input.css);
+@import url(./blocks/authentication/__submit/authentication__submit.css);
+
+/* register */
+
+@import url(./blocks/register/__sign-in/register__sign-in.css);
+@import url(./blocks/register/__login-link/register__login-link.css);
+
+/* status */
+
+@import url(./blocks/popup/__status/_type_success/popup__status_type_success.css);
+@import url(./blocks/popup/__status/_type_fail/popup__status_type_fail.css);
+@import url(./blocks/popup/__title/_status/popup__title_status.css);
