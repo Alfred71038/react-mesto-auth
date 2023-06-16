@@ -3,7 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 import logo from '../images/logo.svg';
 
-function Header ({ loggedIn, userEmail, signOut }) {
+function Header({ loggedIn, userEmail, signOut }) {
 
     const location = useLocation();
     const textLink = location.pathname === '/sign-in' ? "Регистрация" : 'Войти';
@@ -13,8 +13,8 @@ function Header ({ loggedIn, userEmail, signOut }) {
         <header className="header">
             <div className='header__container'>
                 <Link to="/main">
-                    <img src={logo} alt="Логотип" className="logo"/>
-                    </Link>
+                    <img src={logo} alt="Логотип" className="logo" />
+                </Link>
                 {loggedIn && <p className='header__email'>{email}</p>}
                 <Routes>
                     <Route path='/sign-up'
@@ -29,12 +29,12 @@ function Header ({ loggedIn, userEmail, signOut }) {
                     />
                 </Routes>
                 {loggedIn && (
-                <button
-                    className="header__button"
-                    onClick={signOut}
-                >
-                    {signOutText}
-                </button>
+                    <button
+                        className="header__button"
+                        onClick={signOut}
+                    >
+                        {signOutText}
+                    </button>
                 )}
             </div>
         </header>

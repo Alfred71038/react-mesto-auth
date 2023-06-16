@@ -12,7 +12,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
         onCardLike(card);
     }
 
-    function handleDeleteClick()    {
+    function handleDeleteClick() {
         onCardDelete(card);
     }
 
@@ -20,32 +20,32 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
     const isOwn = card.owner._id === currentUser._id;
 
-   const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i._id === currentUser._id);
 
-   const cardLikeButtonClassName = (
-    `element__place-reaction ${isLiked && 'element__place-reaction_active'}`
-   )
+    const cardLikeButtonClassName = (
+        `element__place-reaction ${isLiked && 'element__place-reaction_active'}`
+    )
 
-    return(
+    return (
         <li className="element">
-            <img className="element__image" alt={card.name} src={card.link} onClick={handleClick}/>
+            <img className="element__image" alt={card.name} src={card.link} onClick={handleClick} />
             <div className="element__place">
                 <h2 className="element__place-name">{card.name}</h2>
                 <div>
-                    <button 
-                        className={cardLikeButtonClassName} 
+                    <button
+                        className={cardLikeButtonClassName}
                         type="button"
                         onClick={handleLikeClick}>
-                        <img src={Like} alt="лайк"/>
+                        <img src={Like} alt="лайк" />
                     </button>
                     <p className="element__place-count">{card.likes.length}</p>
                 </div>
             </div>
-            {isOwn && <button 
-            className="element__delete-button" 
-            type="button"
-            onClick={handleDeleteClick} />}
-            
+            {isOwn && <button
+                className="element__delete-button"
+                type="button"
+                onClick={handleDeleteClick} />}
+
         </li>
     )
 }

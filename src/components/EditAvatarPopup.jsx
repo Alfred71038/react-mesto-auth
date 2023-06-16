@@ -1,7 +1,7 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
-export default function EditAvatarPopup ({ isOpen, onClose, onUpdateAvatar}) {
+export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
 
     const avatar = React.useRef();
 
@@ -14,9 +14,9 @@ export default function EditAvatarPopup ({ isOpen, onClose, onUpdateAvatar}) {
         if (!isOpen) {
             avatar.current.value = '';
         }
-    }, [isOpen]) 
+    }, [isOpen])
 
-    
+
 
     return (
         <PopupWithForm
@@ -26,15 +26,15 @@ export default function EditAvatarPopup ({ isOpen, onClose, onUpdateAvatar}) {
             isOpen={isOpen}
             onClose={onClose}
             onSubmit={handleSubmit}>
-                <input 
-                    id="avatar-input"
-                    type="url"
-                    name="link" 
-                    className="popup__input" 
-                    placeholder="Ссылка на картинку"
-                    required
-                    ref={avatar}/>
-                    <span className="avatar-input-error popup__input-error"></span>
+            <input
+                id="avatar-input"
+                type="url"
+                name="link"
+                className="popup__input"
+                placeholder="Ссылка на картинку"
+                required
+                ref={avatar} />
+            <span className="avatar-input-error popup__input-error"></span>
         </PopupWithForm>
     )
 }
